@@ -41,6 +41,25 @@ El trabajo se realiza de forma incremental, permitiendo comprender cada etapa de
 - `clientes.csv`
 - `evidencia_extraccion_dia1.xlsx`
 
+**Verificación:**  
+¿Qué consideraciones de seguridad debes tener al conectar con bases de datos y APIs?  
+¿Cómo manejarías errores de conexión o respuestas inválidas?
+
+**Respuesta:**
+
+Al conectar con bases de datos y APIs es fundamental considerar:
+
+- No incluir credenciales directamente en el código fuente.
+- Usar variables de entorno o archivos de configuración excluidos del repositorio.
+- Aplicar el principio de menor privilegio en usuarios de bases de datos.
+- Preferir conexiones seguras (HTTPS, SSL/TLS).
+
+Para el manejo de errores:
+- Utilizar bloques `try/except` para capturar errores de conexión.
+- Validar códigos de respuesta y estructura de datos de APIs.
+- Registrar errores mediante logging.
+- Evitar que un fallo detenga todo el proceso ETL.
+
 ---
 
 ### Día 2 – Transformaciones básicas y calidad de datos
@@ -61,11 +80,66 @@ El trabajo se realiza de forma incremental, permitiendo comprender cada etapa de
 - `ETL_Dia2_Transformaciones_Basicas.ipynb`
 - `evidencia_limpieza_validacion_dia2.xlsx`
 
+**Verificación:**  
+¿Cuándo deberías eliminar datos faltantes vs imputarlos?  
+¿Qué tipos de validaciones son más importantes para diferentes tipos de datos?
+
+**Respuesta:**
+
+La decisión depende del contexto del análisis y del impacto en la calidad de los datos:
+
+- **Eliminar datos faltantes** cuando:
+  - El dato es crítico y no puede inferirse.
+  - La cantidad de registros afectados es baja.
+  - Mantenerlos introduce sesgos importantes.
+
+- **Imputar datos faltantes** cuando:
+  - El volumen de datos incompletos es alto.
+  - Existen reglas claras de negocio.
+  - Se requiere conservar la mayor cantidad de información posible.
+
+Validaciones más relevantes:
+- Numéricos: rangos válidos y valores positivos.
+- Categóricos: dominios permitidos y normalización.
+- Fechas: formatos correctos y coherencia temporal.
+- Identificadores: unicidad y ausencia de duplicados.
+
+---
+
+### Día 3 – Transformaciones avanzadas y enriquecimiento
+
+- Uniones de datos entre múltiples tablas (joins)
+- Enriquecimiento de datasets con información relacionada
+- Agregaciones y cálculos derivados por entidad
+- Generación de métricas analíticas por cliente
+- Validación de integridad referencial
+- Validación de reglas de negocio
+- Preparación de datos para análisis y carga posterior
+
+**Archivos principales:**
+- `ETL_Dia3_Transformaciones_Avanzadas.ipynb`
+- `evidencia_transformaciones_avanzadas_dia3.xlsx`
+
+**Verificación:**  
+¿Qué tipo de join usarías cuando quieras mantener todos los registros de una tabla principal?  
+¿Cómo decides qué métricas calcular para un análisis específico?
+
+**Respuesta:**
+
+Para mantener todos los registros de una tabla principal se utiliza un **LEFT JOIN**, ya que permite conservar todas las filas de la tabla principal y agregar información de la tabla relacionada solo cuando existe coincidencia.
+
+La selección de métricas depende del objetivo del análisis y del contexto del negocio. Para decidir qué métricas calcular se consideran:
+- Las preguntas que se desea responder con los datos.
+- Las decisiones de negocio que se deben apoyar.
+- Las reglas del dominio.
+- La calidad y disponibilidad de la información.
+
+Las métricas deben ser relevantes, coherentes y útiles para etapas posteriores del proceso ETL.
+
 ---
 
 ## Días restantes
 
-- Día 3 – Transformaciones avanzadas y enriquecimiento
 - Día 4 – Carga de datos y estrategias de destino
 - Día 5 – Manejo de errores y logging en ETL
 
@@ -95,6 +169,8 @@ ETL-Python-SQL/
 ├── evidencia_extraccion_dia1.xlsx
 ├── ETL_Dia2_Transformaciones_Basicas.ipynb
 ├── evidencia_limpieza_validacion_dia2.xlsx
+├── ETL_Dia3_Transformaciones_Avanzadas.ipynb
+├── evidencia_transformaciones_avanzadas_dia3.xlsx
 
 ```
 
