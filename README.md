@@ -1,4 +1,4 @@
-\# ETL-Python-SQL
+# ETL-Python-SQL
 
 
 
@@ -14,7 +14,7 @@ Este repositorio documenta el trabajo realizado durante la \*\*Semana de ETL con
 
 
 
-\## Descripción de la semana
+## Descripción de la semana
 
 
 
@@ -30,21 +30,21 @@ El trabajo se realiza de forma incremental, permitiendo comprender cada etapa de
 
 
 
-\## Objetivos generales
+## Objetivos generales
 
 
 
-\- Comprender la arquitectura y el flujo de un proceso ETL.
+- Comprender la arquitectura y el flujo de un proceso ETL.
 
-\- Extraer datos desde múltiples fuentes utilizando Python y SQL.
+- Extraer datos desde múltiples fuentes utilizando Python y SQL.
 
-\- Aplicar transformaciones básicas y avanzadas sobre los datos.
+- Aplicar transformaciones básicas y avanzadas sobre los datos.
 
-\- Cargar datos transformados en distintos destinos.
+- Cargar datos transformados en distintos destinos.
 
-\- Implementar manejo de errores y logging en procesos ETL.
+- Implementar manejo de errores y logging en procesos ETL.
 
-\- Documentar y versionar el trabajo utilizando Git y GitHub.
+- Documentar y versionar el trabajo utilizando Git y GitHub.
 
 
 
@@ -56,45 +56,27 @@ El trabajo se realiza de forma incremental, permitiendo comprender cada etapa de
 
 
 
-\### Día 1 – Extracción de datos
+### Día 1 – Extracción de datos
 
-\- Lectura de archivos CSV
+- Lectura de archivos CSV
 
-\- Extracción de datos desde APIs (simuladas)
+- Extracción de datos desde APIs (simuladas)
 
-\- Conexión y extracción desde bases de datos SQLite
+- Conexión y extracción desde bases de datos SQLite
 
-\- Manejo de problemas reales de datos (encoding, delimitadores)
+- Manejo de problemas reales de datos (encoding, delimitadores)
 
-\- Generación de evidencia de extracción en archivo Excel
+- Generación de evidencia de extracción en archivo Excel
 
 
 
 Archivos principales:
 
-\- `ETL\_Dia1\_Extraccion\_Multiples\_Fuentes.ipynb`
+- `ETL_Dia1_Extraccion_Multiples_Fuentes.ipynb`
 
-\- `clientes.csv`
+- `clientes.csv`
 
-\- `evidencia\_extraccion\_dia1.xlsx`
-
-
-
----
-
-
-
-\## Días restantes
-
-
-
-\- Día 2 – Transformaciones básicas
-
-\- Día 3 – Transformaciones avanzadas y enriquecimiento
-
-\- Día 4 – Carga de datos y estrategias de destino
-
-\- Día 5 – Manejo de errores y logging en ETL
+- `evidencia_extraccion_dia1.xlsx`
 
 
 
@@ -102,21 +84,39 @@ Archivos principales:
 
 
 
-\## Tecnologías utilizadas
+## Días restantes
 
 
 
-\- Python
+- Día 2 – Transformaciones básicas
 
-\- Pandas
+- Día 3 – Transformaciones avanzadas y enriquecimiento
 
-\- SQL
+- Día 4 – Carga de datos y estrategias de destino
 
-\- SQLite
+- Día 5 – Manejo de errores y logging en ETL
 
-\- Jupyter Notebook
 
-\- Git y GitHub
+
+---
+
+
+
+## Tecnologías utilizadas
+
+
+
+- Python
+
+- Pandas
+
+- SQL
+
+- SQLite
+
+- Jupyter Notebook
+
+- Git y GitHub
 
 
 
