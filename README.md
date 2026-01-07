@@ -52,7 +52,7 @@ El trabajo se realiza de forma incremental, permitiendo comprender cada etapa de
 
 
 
-\## Contenidos del repositorio
+## Contenidos del repositorio
 
 
 
@@ -124,7 +124,7 @@ Archivos principales:
 
 
 
-\## Estructura del repositorio
+## Estructura del repositorio
 
 
 
