@@ -206,7 +206,6 @@ La elección correcta de estrategia y tamaño de lote impacta directamente en el
 
 **Archivos principales:**
 - `ETL_Dia5_Pipeline_ETL_Manejo_Errores.ipynb`
-- `etl_ecommerce.log`
 - `evidencia_etl_dia5.xlsx`
 
 **Verificación:**  
