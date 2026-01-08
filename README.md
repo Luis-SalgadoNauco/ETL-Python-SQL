@@ -138,9 +138,50 @@ Las métricas deben ser relevantes, coherentes y útiles para etapas posteriores
 
 ---
 
+### Día 4 – Carga de datos y estrategias de destino
+
+- Implementación de distintas estrategias de carga de datos
+- Carga completa (Full Load) en base de datos SQLite
+- Carga incremental basada en identificadores
+- Comparación de rendimiento entre estrategias de carga
+- Generación de evidencia en archivo Excel
+- Evaluación de eficiencia según volumen y frecuencia de datos
+
+**Archivos principales:**
+- `ETL_Dia4_Carga_Datos.ipynb`
+- `evidencia_carga_dia4.xlsx`
+
+**Verificación:**  
+¿En qué situaciones usarías carga completa vs incremental?  
+¿Qué factores influyen en el tamaño óptimo de lote para carga de datos?
+
+**Respuesta:**
+
+- **Carga completa (Full Load)** se utiliza cuando:
+  - El volumen de datos es pequeño o manejable.
+  - Los datos cambian completamente entre ejecuciones.
+  - Se requiere asegurar consistencia total del dataset.
+  - El costo de recargar todo es bajo.
+
+- **Carga incremental** se utiliza cuando:
+  - Existen grandes volúmenes de datos.
+  - Los cambios son frecuentes pero parciales.
+  - Se necesita optimizar tiempos y recursos.
+  - Se dispone de campos como `id`, `timestamp` o `updated_at`.
+
+Factores que influyen en el tamaño óptimo de lote:
+- Capacidad de la base de datos de destino.
+- Memoria disponible.
+- Latencia de red.
+- Presencia de índices y restricciones.
+- Requerimientos de atomicidad y rollback.
+
+La elección correcta de estrategia y tamaño de lote impacta directamente en el rendimiento, la confiabilidad y la escalabilidad del proceso ETL.
+
+---
+
 ## Días restantes
 
-- Día 4 – Carga de datos y estrategias de destino
 - Día 5 – Manejo de errores y logging en ETL
 
 ---
@@ -171,6 +212,8 @@ ETL-Python-SQL/
 ├── evidencia_limpieza_validacion_dia2.xlsx
 ├── ETL_Dia3_Transformaciones_Avanzadas.ipynb
 ├── evidencia_transformaciones_avanzadas_dia3.xlsx
+├── ETL_Dia4_Carga_Datos.ipynb
+├── evidencia_carga_dia4.xlsx
 
 ```
 
